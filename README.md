@@ -13,6 +13,7 @@ Every time the script runs it will get your current external IP and then check f
 ```bash
 sudo python3 -m pip install requests configparser
 ```
+> if you get the setuptools error thingy try `sudo python3 -m pip install -U setuptools` and start over with the module installation.
 
 ### Configure the script
 Edit the **settings.ini** file next to the script:
@@ -45,6 +46,7 @@ You can start and/or reload the cron config:
 sudo /etc/init.d/cron start
 sudo /etc/init.d/cron reload
 ```
+> Use `sudo /usr/syno/sbin/synoservicectl --restart crond` on Synology.
 
 ### :sparkles: You are good to go :sparkles:
 
