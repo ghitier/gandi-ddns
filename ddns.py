@@ -7,6 +7,9 @@ log = log()
 gandi = gandi()
 ipify = ipify()
 
+# get the settings
+gandi.get_settings(log)
+
 # get external ip address
 ipify.get(log)
 
@@ -25,4 +28,4 @@ if gandi.same_ip(ipify.ip) == False:
     log.warning('local (' + ipify.ip + ') and DNS (' + gandi.ip + ') ip addresses are different.')
     gandi.update_ip(log, ipify.ip)
     log.append('updated DNS ip address to ' + log.color['green'] + ipify.ip + log.color['reset'] + '.')
-sys.exit()
+sys.exit(0)

@@ -11,4 +11,4 @@ class ipify:
             self.ip = requests.get(self._url).text
         except:
             log.error('Couldn\'t get public ip address.')
-            sys.exit()
+            sys.exit(1)
