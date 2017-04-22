@@ -2,11 +2,11 @@
 #### Dynamically update your Gandi DNS records
 
 ## Description
-Python(3.5+) script to update DNS records of your domain dynamically using gandi.net's API. Just as no-ip and dyndns you can have a domain that points at your servers's IP address.
+Python(3.5>=) script to update your servers IPv4 address on the DNS records of your domain dynamically using Gandi's API.
 
-This was designed with Synology Diskstations in mind, but could be used as good as anywhere.
+The script was designed to work for a Synology Diskstation, but can actually work on any server which has python3 and any task scheduler installed.
 
-Every time te script runs it will get your current external IP from the 'ipify.org' API, then it will check for the IP in the '@' record for the domain (it's '@' by default but you can change that if you want to). Once it has both IPs it will compare what is in the DNS config vs what your IP is, and update the DNS config for the domain as appropriate so that it resolves to your current IP address.
+Every time te script runs it will get your current external IP and will then check for the IP in the '@' record of your domain (it's '@' by default, but you can change that if you want to). Once it has both IPs it will compare them and update your DNS config appropriately in order to resolve the new IP.
 
 ## Installation
 ### Install modules (if needed)
