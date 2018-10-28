@@ -1,4 +1,4 @@
-# Gandi Dynamic DNS
+# [DEPRECIATED] Gandi Dynamic DNS
 #### Dynamically update your Gandi DNS records
 
 ## Description
