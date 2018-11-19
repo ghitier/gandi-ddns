@@ -17,7 +17,7 @@ pip install -r requirements.txt
 ### Configure the script
 Copy the **settings.template.ini** to **settings.ini**, then edit **settings.ini**:
 1. Fill in your domain name
-2. Fill in your **production** [API Key](https://www.gandi.net/admin/apixml/)
+2. Fill in your [API Key](https://account.gandi.net/) (go to `Security > ApiKey`)
 
 3. *Change the 'A' type record which uses the dynamically changing IP (all records with the same IP will get changed as well).*
 
