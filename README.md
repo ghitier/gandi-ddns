@@ -1,4 +1,3 @@
-# [DEPRECIATED] Gandi Dynamic DNS
 #### Dynamically update your Gandi DNS records
 
 ## Description
@@ -11,12 +10,12 @@ Every time the script runs it will get your current external IP and then check f
 ## Installation
 ### Install modules (if needed)
 ```bash
-sudo python3 -m pip install requests configparser
+pip install -r requirements.txt
 ```
 > if you get the setuptools error thingy try `sudo python3 -m pip install -U setuptools` and start over with the module installation.
 
 ### Configure the script
-Edit the **settings.ini** file next to the script:
+Copy the **settings.template.ini** to **settings.ini**, then edit **settings.ini**:
 1. Fill in your domain name
 2. Fill in your **production** [API Key](https://www.gandi.net/admin/apixml/)
 
@@ -24,8 +23,8 @@ Edit the **settings.ini** file next to the script:
 
 ```ini
 [User]
-domain =
-key =
+domain = example.com
+api_key = xXxxxXxxXxXXxXxxXXxXxXxX
 
 [DNS]
 record = @
@@ -49,6 +48,3 @@ sudo /etc/init.d/cron reload
 > Use `sudo /usr/syno/sbin/synoservicectl --restart crond` on Synology.
 
 ### :sparkles: You are good to go :sparkles:
-
-## Additional information
-In case of an event (IP change, failure, etc...), a log file *log.txt* is created next to the script.
