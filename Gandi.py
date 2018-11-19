@@ -1,3 +1,4 @@
+import os
 import requests
 import configparser
 from Record import Record
@@ -15,7 +16,7 @@ class Gandi():
     def load_config(self):
         try:
             conf = configparser.ConfigParser(allow_no_value=True);
-            conf.read('./settings.ini')
+            conf.read(os.path.dirname(os.path.realpath(__file__)) + '/settings.ini')
             sections = conf.sections()
             if 'User' not in sections or 'DNS' not in sections:
                 raise Exception('Missing sections')
